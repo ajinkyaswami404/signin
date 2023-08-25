@@ -90,7 +90,7 @@ public class ValidateUser {
     }
   }
 
-  public String isDuplicate(User user) {
+  public String isDuplicate(User user) { //isUserAlreadyExist
     List<User> saveUser = userRepository.findForSave(user.getEmailId(), user.getContactNo());
     if (!saveUser.isEmpty()) {
       logger.warn(Fields.duplicate + user);

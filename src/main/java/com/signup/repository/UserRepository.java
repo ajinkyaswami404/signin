@@ -26,5 +26,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
   @Query(
       "SELECT user FROM User user WHERE(user.emailId =:emailId)"
           + "or (user.contactNo =:contactNo)")
-  List<User> findForSave(String emailId, String contactNo);
+  List<User> findForSave(String emailId, String contactNo); //findUserByEmailAndContact
 }
